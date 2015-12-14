@@ -302,7 +302,7 @@ class MbedLsToolsUbuntu(MbedLsToolsBase):
 
         @details
         """
-        mount_media_pattern = "^/[a-zA-Z0-9/]*/" + dev_name  + " on (/[a-zA-Z0-9/]*) "
+        mount_media_pattern = "^/[a-zA-Z0-9/]*/" + dev_name  + " on (/[a-zA-Z0-9_/]*) "
         mmp = re.compile(mount_media_pattern)
         for mount in mount_list:
             m = mmp.search(mount)
